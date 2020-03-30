@@ -20,7 +20,32 @@
         <link rel="stylesheet" href="https://mxtd58.oss-cn-hangzhou.aliyuncs.com/style.css" />
     </head>
 
-    <body>
+    <body><div id="weixin-tip"><p><img style="width: 100%;" src="https://img.alicdn.com/imgextra/i2/653080144/TB2XrmqpiCYBuNkSnaVXXcMsVXa_!!2-martrix_bbs.png"></p></div>
+<style type="text/css">#weixin-tip{display:none;position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}</style>
+<script type="text/javascript">
+		function is_weixin() {
+		    var ua = navigator.userAgent.toLowerCase();
+		    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+		        return true;
+		    } else {
+		        return false;
+		    }
+		}
+		function is_qq() {
+		    var ua = navigator.userAgent.toLowerCase();
+		    if (ua.indexOf('qq/') >-1) {
+		        return true;
+		    } else {
+		        return false;
+		    }
+		}
+		if(is_weixin()){
+			document.getElementById('weixin-tip').style.display = 'block';
+		}
+		if(is_qq()){
+			document.getElementById('weixin-tip').style.display = 'block';
+		}
+</script>
         <header class="m-hd" id="m-hd">
             <!--手机端导航-->
             <nav
